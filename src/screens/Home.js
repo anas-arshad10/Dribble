@@ -2,9 +2,9 @@ import React from 'react';
 import {View, Text, Image, TouchableOpacity, ScrollView} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-// const navigation = useNavigation();
 
 const Home = () => {
+  const navigation = useNavigation();
   return(
     <View style={{backgroundColor: 'lightblue', flex: 1}}>
     <View style={{marginTop: 20 , padding: 20, flexDirection: 'row', justifyContent: 'space-between'}}>
@@ -27,7 +27,7 @@ const Home = () => {
     <ScrollView>
     <View style={{padding: 10}}>
       <TouchableOpacity 
-      // onPress={() => navigation?.navigate('Facebook')}
+      onPress={() => navigation?.navigate('Facebook')}
       style={{backgroundColor:'#3b5998', borderRadius: 10, flexDirection: 'row', justifyContent: 'space-between'}}>
         <View style={{padding: 30}}>
         <Text style={{color:'white' , fontSize: 40, fontWeight: 'bold'}}>

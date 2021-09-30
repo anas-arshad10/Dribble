@@ -1,11 +1,12 @@
 import React from 'react';
 import { View } from 'react-native';
 
-import { NavigationContainer, useNavigation } from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import Home from '../src/screens/Home';
 import Facebook from '../src/screens/Facebook';
+import BottomTabs from './BottomTabs';
 
 const Stack = createStackNavigator();
 
@@ -15,14 +16,14 @@ const AppNavigation = (props) =>{
             <NavigationContainer>
                 <Stack.Navigator>
                     <Stack.Screen 
-                        name="Home"
-                        component={Home}
-                        option={{headerShown: false}}
+                        name="BottomTabs"
+                        component={BottomTabs}
+                        options={{headerShown: false}}
                     />
                     <Stack.Screen 
                         name="Facebook"
                         component={Facebook}
-                        option={{headerShown: false}}
+                        options={{headerShown: false}}
                     />
                 </Stack.Navigator>
             </NavigationContainer>
