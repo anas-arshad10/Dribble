@@ -1,8 +1,6 @@
 import React from 'react';
 import {View, Text, Image, TouchableOpacity, ScrollView} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-
-
 const Home = () => {
   const navigation = useNavigation();
   return(
@@ -26,8 +24,8 @@ const Home = () => {
     </View>
     <ScrollView>
     <View style={{padding: 10}}>
-      <TouchableOpacity 
-      onPress={() => navigation?.navigate('Facebook')}
+      <TouchableOpacity
+      onPress={() => navigation.navigate('Facebook')}
       style={{backgroundColor:'#3b5998', borderRadius: 10, flexDirection: 'row', justifyContent: 'space-between'}}>
         <View style={{padding: 30}}>
         <Text style={{color:'white' , fontSize: 40, fontWeight: 'bold'}}>
@@ -39,13 +37,15 @@ const Home = () => {
         </View>
         <View style={{padding: 30}}>
           <Image source={require('../../assets/FB.png')}
-          style={{ width: 70, height:70}}/> 
+          style={{ width: 60, height:60}}/> 
         </View>
 
       </TouchableOpacity>
     </View>
     <View style={{padding: 10}}>
-      <TouchableOpacity style={{backgroundColor:'#34bf49', borderRadius: 10, flexDirection: 'row', justifyContent: 'space-between'}}>
+      <TouchableOpacity
+      onPress={() => navigation.navigate('Whatsapp')}
+      style={{backgroundColor:'#34bf49', borderRadius: 10, flexDirection: 'row', justifyContent: 'space-between'}}>
         <View style={{padding: 30}}>
         <Text style={{color:'white' , fontSize: 40, fontWeight: 'bold'}}>
           Whatsapp
@@ -62,7 +62,9 @@ const Home = () => {
       </TouchableOpacity>
     </View>
     <View style={{padding: 10}}>
-      <TouchableOpacity style={{backgroundColor:'#bc2a8d', borderRadius: 10, flexDirection: 'row', justifyContent: 'space-between'}}>
+      <TouchableOpacity
+      onPress={() => navigation.navigate('Instagram')}
+      style={{backgroundColor:'#bc2a8d', borderRadius: 10, flexDirection: 'row', justifyContent: 'space-between'}}>
         <View style={{padding: 30}}>
         <Text style={{color:'white' , fontSize: 40, fontWeight: 'bold'}}>
           Instagram
@@ -79,7 +81,9 @@ const Home = () => {
       </TouchableOpacity>
     </View>
     <View style={{padding: 10}}>
-      <TouchableOpacity style={{backgroundColor:'#bb0000', borderRadius: 10, flexDirection: 'row', justifyContent: 'space-between'}}>
+      <TouchableOpacity 
+      onPress={() => navigation.navigate('Youtube')}
+      style={{backgroundColor:'#bb0000', borderRadius: 10, flexDirection: 'row', justifyContent: 'space-between'}}>
         <View style={{padding: 30}}>
         <Text style={{color:'white' , fontSize: 40, fontWeight: 'bold'}}>
           Youtube
@@ -96,7 +100,9 @@ const Home = () => {
       </TouchableOpacity>
     </View>
     <View style={{padding: 10}}>
-      <TouchableOpacity style={{backgroundColor:'#00aced', borderRadius: 10, flexDirection: 'row', justifyContent: 'space-between'}}>
+      <TouchableOpacity 
+      onPress={() => navigation.navigate('Twitter')}
+      style={{backgroundColor:'#00aced', borderRadius: 10, flexDirection: 'row', justifyContent: 'space-between'}}>
         <View style={{padding: 30}}>
         <Text style={{color:'white' , fontSize: 40, fontWeight: 'bold'}}>
           Twitter
@@ -112,7 +118,9 @@ const Home = () => {
 
       </TouchableOpacity>
     </View><View style={{padding: 10}}>
-      <TouchableOpacity style={{backgroundColor:'#FEE227', borderRadius: 10, flexDirection: 'row', justifyContent: 'space-between'}}>
+      <TouchableOpacity 
+      onPress={() => navigation.navigate('Snapchat')}
+      style={{backgroundColor:'#FEE227', borderRadius: 10, flexDirection: 'row', justifyContent: 'space-between'}}>
         <View style={{padding: 30}}>
         <Text style={{color:'white' , fontSize: 40, fontWeight: 'bold'}}>
           Snapchat
